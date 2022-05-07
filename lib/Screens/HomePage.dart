@@ -1,3 +1,5 @@
+import 'package:demo/Screens/SigninPage.dart';
+import 'package:demo/Screens/SinupPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -41,18 +43,21 @@ class HomePage extends StatelessWidget {
                   Align(
                     alignment: Alignment.center,
                     child: InkWell(
-                      onTap: (){},
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => SignupPage()));
+                      },
                       child: Ink(
                         width: 300,
                         height: 60,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.blue
-                        ),
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.blue),
                         child: Center(
                           child: Text(
                             'Sign Up',
-                            style: GoogleFonts.poppins(fontSize: 18, color: Colors.white),
+                            style: GoogleFonts.poppins(
+                                fontSize: 18, color: Colors.white),
                           ),
                         ),
                       ),
@@ -62,18 +67,21 @@ class HomePage extends StatelessWidget {
                   Align(
                     alignment: Alignment.center,
                     child: InkWell(
-                      onTap: (){},
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => SigninPage()));
+                      },
                       child: Ink(
                         width: 300,
                         height: 60,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Colors.white60
-                        ),
+                            color: Colors.white60),
                         child: Center(
                           child: Text(
                             'Sign In',
-                            style: GoogleFonts.poppins(fontSize: 18, color: Colors.black),
+                            style: GoogleFonts.poppins(
+                                fontSize: 18, color: Colors.black),
                           ),
                         ),
                       ),
